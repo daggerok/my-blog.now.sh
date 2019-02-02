@@ -1,0 +1,5 @@
+= my-blog.now.sh image:https://travis-ci.org/daggerok/my-blog.now.sh.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/my-blog.now.sh"]
+
+- https://my-blog.now.sh
+- link:https://zeit.co/now[now usage]
+- link:https://vuepress.vuejs.org/[VuePress usage]
