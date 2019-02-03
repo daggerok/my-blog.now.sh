@@ -3,3 +3,5 @@
 - https://my-blog.now.sh
 - link:https://zeit.co/now[now usage]
 - link:https://vuepress.vuejs.org/[VuePress usage]
+- link:https://vuepressbook.com/[VuePress book]
+- link:https://www.webfx.com/tools/emoji-cheat-sheet/[Find your emoji]

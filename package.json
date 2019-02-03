@@ -1,15 +1,20 @@
 {
   "name": "daggerok.now.sh",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/daggerok/daggerok.now.sh.git",
   "author": "Maksim Kostromin <daggerok@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@vuepress/plugin-active-header-links": "1.0.0-alpha.0",
+    "@vuepress/plugin-back-to-top": "1.0.0-alpha.0",
+    "@vuepress/plugin-blog": "1.0.0-alpha.0",
+    "@vuepress/plugin-medium-zoom": "1.0.0-alpha.0",
+    "@vuepress/plugin-pagination": "1.0.0-alpha.0",
     "now": "13.1.2",
     "rimraf": "2.6.3",
     "serve": "10.1.1",
-    "vuepress": "0.14.8",
+    "vuepress": "1.0.0-alpha.35",
     "webpack": "4.25.1"
   },
   "scripts": {
