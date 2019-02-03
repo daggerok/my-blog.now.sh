@@ -31,12 +31,12 @@ cache:
   npm: true
   directories:
     - node_modules
-    - "${HOME}/.npm*"
     - "${HOME}/.node*"
+    - "${HOME}/.now*"
+    - "${HOME}/.npm*"
 before_deploy:
   - npm i
   - npm run build
-  - mkdir -p .vuepress/dist
 deploy:
   provider: script
   script: npm run ci

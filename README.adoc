@@ -1,5 +1,11 @@
 = my-blog.now.sh image:https://travis-ci.org/daggerok/my-blog.now.sh.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/my-blog.now.sh"]
 
+[source,bash]
+----
+npm i -ED yubisaki-shell
+./node_modules/.bin/yubisaki post -p blog/2019/02/03/javascript --page README.md
+----
+````
 - https://my-blog.now.sh
 - link:https://zeit.co/now[now usage]
 - link:https://vuepress.vuejs.org/[VuePress usage]

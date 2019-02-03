@@ -1,7 +1,7 @@
 module.exports = {
   lang: 'ru-RU',
-  title: 'Фото в Одессе',
-  description: 'Быстро. Качественно. Круто.',
+  title: 'Мой блог',
+  description: 'Делай дело',
   base: '/',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
@@ -12,12 +12,8 @@ module.exports = {
       updatePopup: true,
     },
     nav: [
-      { text: 'Главная', link: '/' },
-      { text: 'Услуги', link: '/services/' },
-      { text: 'Цены', link: '/price/' },
-      { text: 'Блог', link: '/blog/' },
-      // { text: 'Tags', link: '/tag/' },
-      // { text: 'Categories', link: '/category/' },
+      { text: 'Блог', link: '/' },
+      { text: 'Обо мне', link: '/about/' },
     ],
     repo: 'daggerok/my-blog.now.sh',
     lastUpdated: 'Обновлено', // string | boolean
@@ -36,8 +32,5 @@ module.exports = {
   //   // slugify: 'limax',
   //   highlightedLineBackground: '#ffe9ad',
   //   hideLanguage: true,
-  //   plugins: [
-  //     'markdown-it-footnote'
-  //   ]
   // }
 };

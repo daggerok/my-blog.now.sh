@@ -1,24 +1,16 @@
 ---
-#navbar: false
-#sidebar: auto
-sidebarDepth: 2
+lang: ru-RU
+todo: true
 home: true
-actionText: Заказать сьемку →
-actionLink: /price/
-features:
-- title: Быстро
-  details: Ох как быстро то... Прям Flash!
-- title: Качественно
-  details: Базарю, БП!
-- title: Круто
-  details: Та ваще! 😎
-footer: MIT Licensed | Copyright © 2019 Валерия
+heroText: ' '
+description: ' '
 ---
 
-<p>превед!</p>
+<MyPosts />
 
-<div>ага..</div>
+<!--
+<Info />
+-->
 
-<Blog />
+<MyFooter />
 
-<Posts />
