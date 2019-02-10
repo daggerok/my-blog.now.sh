@@ -1,40 +1,47 @@
-@media screen and (max-width: 767px)
-  body, hmtl
-    zoom 100%
-@media screen and (min-width: 767px), scrren and (max-width: 1281px)
-  body, hmtl
-    zoom 125%
-@media screen and (min-width: 1281px)
-  body, hmtl
-    zoom 150%
-// Fuck this shit...
 @media screen and (max-width: 320px)
   body, hmtl
     zoom 100%
 // Most of the Smartphones Mobiles (Portrait) Screen = B/w 320px to 479px
-@media screen and (min-width: 320px), screen and (max-width: 479px)
+@media screen and (min-width: 320px) and (max-width: 479px)
   body, hmtl
     zoom 100%
 // Low Resolution Tablets, Mobiles (Landscape) Screen = B/w 481px to 767px
-@media screen and (min-width: 481px), screen and (max-width: 767px)
+@media screen and (min-width: 481px) and (max-width: 767px)
+  body, hmtl
+    zoom 100%
+@media screen and (max-width: 767px)
+  body, hmtl
+    zoom 100%
+// iPad in portrait & landscape
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
   body, hmtl
     zoom 100%
 // Tablets, Ipads (landscape) Screen = B/w 768px to 1024px
-@media screen and (min-width: 768px), screen and (max-width: 1024px), screen and (orientation: landscape)
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
   body, hmtl
     zoom 125%
 // Tablets, Ipads (portrait) Screen = B/w 768px to 1024px
-@media screen and (min-width: 768px), screen and (max-width: 1024px)
+@media screen and (min-width: 768px) and (max-width: 1024px)
+  body, hmtl
+    zoom 125%
+// iPad in landscape
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
+  body, hmtl
+    zoom 125%
+@media screen and (min-width: 767px) and (max-width: 1280px)
   body, hmtl
     zoom 125%
 // Laptops, Desktops Screen = B/w 1025px to 1280px
-@media screen and (min-width: 1025px), screen and (max-width: 1280px)
+@media screen and (min-width: 1025px) and (max-width: 1280px)
   body, hmtl
     zoom 125%
 // Desktops Screen = 1281px to higher resolution desktops
-@media screen and (min-width: 1281px)
+@media screen and (min-width: 1280px)
   body, hmtl
     zoom 125%
+@media screen and (min-width: 1280px)
+  body, hmtl
+    zoom 150%
 
 /* // TODO: add some animations / transitions...
 body
