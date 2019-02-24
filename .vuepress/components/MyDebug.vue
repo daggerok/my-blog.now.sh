@@ -36,6 +36,6 @@
 </template>
 <script>
   export default {
-    name: 'MyInfo',
+    name: 'MyDebug',
   }
 </script>

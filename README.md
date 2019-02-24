@@ -1,16 +1,10 @@
 ---
 lang: ru-RU
 todo: true
-home: true
+home: false
 heroText: ' '
 description: ' '
 ---
 
 <MyPosts />
-
-<!--
-<Info />
--->
-
-<MyFooter />
-
+<MyHomeHeroFooter />

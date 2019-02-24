@@ -1,11 +1,10 @@
 <template>
   <div>
-    <h2>
+    <h3 class="post-view-heading">
       <router-link :to="path">{{ title }}</router-link>
-    </h2>
-    <p>{{ description }}</p>
+    </h3>
     <p>
-      <router-link :to="path">Читать →</router-link>
+      {{ description }} <router-link :to="path">→ Читать</router-link>
     </p>
   </div>
 </template>
@@ -29,3 +28,8 @@
     },
   };
 </script>
+
+<style lang="stylus">
+  .post-view-heading
+    text-align center
+</style>

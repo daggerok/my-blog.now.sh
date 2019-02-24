@@ -12,13 +12,12 @@
     "@vuepress/plugin-blog": "1.0.0-alpha.0",
     "@vuepress/plugin-medium-zoom": "1.0.0-alpha.0",
     "@vuepress/plugin-pagination": "1.0.0-alpha.0",
-    "now": "13.1.2",
-    "npm": "6.7.0",
+    "@vuepress/theme-default": "1.0.0-alpha.0",
+    "now": "14.0.0",
+    "npm": "6.8.0",
     "rimraf": "2.6.3",
-    "serve": "10.1.1",
-    "terser": "3.14.1",
-    "vuepress": "1.0.0-alpha.35",
-    "yubisaki-shell": "1.2.2"
+    "serve": "10.1.2",
+    "vuepress": "1.0.0-alpha.35"
   },
   "scripts": {
     "clean": "rimraf -rf .vuepress/dist",

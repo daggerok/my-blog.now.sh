@@ -14,11 +14,14 @@ module.exports = {
     nav: [
       { text: 'Блог', link: '/' },
       { text: 'Обо мне', link: '/about/' },
+      // { text: 'Категории', link: '/category/' },
+      // { text: 'Теги', link: '/tag/' },
     ],
     repo: 'daggerok/my-blog.now.sh',
     lastUpdated: 'Обновлено', // string | boolean
   },
   plugins: [
+    // '@vuepress/blog',
     '@vuepress/medium-zoom',
     '@vuepress/back-to-top',
     '@vuepress/pagination',
