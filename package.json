@@ -14,7 +14,7 @@
     "@vuepress/plugin-pagination": "1.0.0-alpha.0",
     "@vuepress/theme-default": "1.0.0-alpha.0",
     "now": "14.0.0",
-    "npm": "6.8.0",
+    "npm": "6.13.4",
     "rimraf": "2.6.3",
     "serve": "10.1.2",
     "vuepress": "1.0.0-alpha.35"
