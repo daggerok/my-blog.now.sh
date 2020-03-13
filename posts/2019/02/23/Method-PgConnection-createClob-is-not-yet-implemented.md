@@ -32,7 +32,6 @@ spring:
           use_jdbc_metadata_defaults: false
 ```
 
-<!--
-;)
+<!-- ;) -->
+
 <MyHomeHeroFooter />
--->
