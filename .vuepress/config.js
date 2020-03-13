@@ -8,6 +8,7 @@ module.exports = {
   ],
   docsDir: '.',
   themeConfig: {
+    smoothScroll: true,
     serviceWorker: {
       updatePopup: true,
     },
