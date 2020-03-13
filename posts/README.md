@@ -7,4 +7,3 @@ description: ' '
 ---
 
 <MyPosts />
-<MyHomeHeroFooter />
