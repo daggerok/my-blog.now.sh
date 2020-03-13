@@ -6,16 +6,19 @@
                      :path="post.path || '/'"
       />
     </div>
+    <MyHomeHeroFooter />
   </div>
 </template>
 
 <script>
   import MyPostPreview from './MyPostPreview';
+  import MyHomeHeroFooter from './MyHomeHeroFooter';
 
   export default {
     name: 'MyPosts',
     components: {
       MyPostPreview,
+      MyHomeHeroFooter,
     },
     computed: {
       posts() {
