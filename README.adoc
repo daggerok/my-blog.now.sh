@@ -6,6 +6,7 @@ npm i -ED yubisaki-shell
 ./node_modules/.bin/yubisaki post -p blog/2019/02/03/javascript --page README.md
 ----
 
+- link:https://ulivz.com/[VuePress blog example]
 - https://my-blog.now.sh
 - link:https://zeit.co/now[now usage]
 - link:https://vuepress.vuejs.org/[VuePress usage]
