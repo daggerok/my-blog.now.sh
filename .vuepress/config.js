@@ -1,8 +1,11 @@
+const base = !!process.env.GITHUB_PAGES ? '/my-blog/' : '/';
+
 module.exports = {
+  extend: '@vuepress/theme-default', // extend the default VuePress theme
   lang: 'ru-RU',
   title: 'Мой блог',
   description: 'Делай дело',
-  base: '/',
+  base,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
@@ -15,14 +18,15 @@ module.exports = {
     nav: [
       { text: 'Блог', link: '/' },
       { text: 'Обо мне', link: '/about/' },
-      // { text: 'Категории', link: '/category/' },
-      // { text: 'Теги', link: '/tag/' },
+      { text: 'Теги', link: '/tags/' },
+      { text: 'Категории', link: '/categories/' },
     ],
-    repo: 'daggerok/my-blog.now.sh',
-    lastUpdated: 'Обновлено', // string | boolean
+    // repo: 'daggerok/my-blog.now.sh',
+    // lastUpdated: 'Обновлено', // string | boolean
   },
   plugins: [
     // '@vuepress/blog',
+    '@vuepress/nprogress',
     '@vuepress/medium-zoom',
     '@vuepress/back-to-top',
     '@vuepress/pagination',
@@ -32,9 +36,10 @@ module.exports = {
       headerTopOffset: 120
     },
   ],
-  // markdown: {
-  //   // slugify: 'limax',
-  //   highlightedLineBackground: '#ffe9ad',
-  //   hideLanguage: true,
-  // }
+  markdown: {
+    lineNumbers: true,
+    extendMarkdown: md => {
+      md.use(require('markdown-it-vuepress-code-snippet-enhanced'));
+    },
+  },
 };

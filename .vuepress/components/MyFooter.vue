@@ -19,6 +19,7 @@
 </template>
 -->
 
+<!--
 <template>
   <footer class="footer">
     <div>
@@ -31,6 +32,22 @@
       <br/>
       <br/>
       Максим Костромин он же <a href="https://github.com/daggerok">daggerok</a>
+    </div>
+    &lt;!&ndash;<h1>🐻</h1>&ndash;&gt;
+  </footer>
+</template>
+-->
+
+<template>
+  <footer class="footer">
+    <div>
+      Все права защищены.
+      <br/>
+      Использование материалов, фотографий разрешается после подтверждения
+      <br/>
+      <br/>
+      <br/>
+      Copyright © 2019 <strong>MIT</strong> | <a href="https://about.me/daggerok">Максим Костромин</a>
     </div>
     <!--<h1>🐻</h1>-->
   </footer>

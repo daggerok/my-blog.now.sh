@@ -2,10 +2,14 @@
 lang: ru-RU
 home: true
 title: Обо мне - Максим Костромин
-heroImage: /me.jpg
+heroImage: /me-2021-02-11.jpg
 heroText: Максим Костромин
-description: да! я играю на басу. ну а о большем и сказать-то нечего 
-date: '2019/02/24 02:25:21'
+description: Пишу ПО и умею подогревать еду в микроволновке 
+date: '2019-02-24 02:25:21'
+categories:
+  - oloo trololo
+tags:
+  - ololo trololo
 #actionText: Читать →
 #actionLink: /
 #features:
@@ -19,5 +23,6 @@ date: '2019/02/24 02:25:21'
 #    details: |
 #      ... 3) three
 ---
+
 <MyJoke :value="''"/>
 <MyFooter />
