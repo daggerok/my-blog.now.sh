@@ -1,4 +1,5 @@
 ---
+layout: FooteredLayout
 lang: ru-RU
 home: true
 title: Тэги
@@ -22,11 +23,12 @@ tags:
 #      ... 3) three
 ---
 
+TODO: В разработке...
+
+<!--
 <MyTags />
-<MyDebug
-    v-bind:show$this="true"
-    v-bind:show$site="true"
-    v-bind:show$page="false"
-    v-bind:show$lang="false"
-/>
+
+<MyDebug :show$site=false />
+
 <MyFooter />
+-->

@@ -6,7 +6,7 @@
                      :path="post.path || '/'"
       />
     </div>
-    <MyHomeHeroFooter/>
+    <!--<MyHomeHeroFooter/>-->
   </div>
 </template>
 
@@ -27,9 +27,30 @@ export default {
       //   frontmatter: { type: undefined, published: undefined },
       //     path: undefined, date: undefined, lastUpdated: undefined
       // } ] };
+      const tagQuery = this.$route.query["tags"] || [];
+      const query = typeof tagQuery !== 'string' && Array.isArray(tagQuery) ? [...tagQuery] : [tagQuery];
+      function tagIfPresent(post) {
+        if (query.length < 1) return true;
+
+        const tag = post.frontmatter.tag;
+        if (!!tag && tag.trim().length > 0)
+          return query.filter(t => tag.includes(t)).length > 0;
+
+        const tags = post.frontmatter.tags;
+        if (!tags || !Array.isArray(tags) || tags.length < 1) return true;
+
+        return tags.filter(t => !!t)
+                   .map(t => t.toLowerCase())
+                   .filter(t => query.filter(q => !!q)
+                                     .map(q => q.toLowerCase())
+                                     .filter(q => t.includes(q))
+                                     .length > 0)
+                   .length > 0;
+      }
       return this.$site.pages
                        .filter(page => page.frontmatter.type === 'post')
                        .filter(post => post.path.endsWith('.html'))
+                       .filter(tagIfPresent)
                        // .filter(page => { console.log(page); return page; }) // debug logging...
                        // .filter(html => html.frontmatter.published) // uncomment if you would like to void drafts
                        .sort((p1, p2) => !p1.date || !p2.date // if no date fields provided by frontmatter, then compare git

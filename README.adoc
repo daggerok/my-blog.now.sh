@@ -2,17 +2,25 @@
 
 [source,bash]
 ----
-npx yubisaki-shell post -p blog/2021/02/05/lets-test-that-shit --page README.md
+npm i -gED yubisaki-shell
 
-# same as:
-
-npm i -ED yubisaki-shell
-./node_modules/.bin/yubisaki post -p blog/2019/02/03/javascript --page README.md
+npx yubisaki-shell post -p posts/2021/02/05/lets-test-that-shit --page README.md
 ----
 
+current (custom) blog is located here: https://my-blog.now.sh
+
+correct way do VuePress blogging:
+
+- link:https://github.com/vuepress/vuepress-plugin-blog[VuePress blog official plugin]
+- link:https://vuepress-plugin-blog.ulivz.com/guide/getting-started.html[VuePress blog official plugin documentation]
+
+current (alternative) custom way do VuePress blogging:
+
+- link:https://github.com/tolking/vuepress-theme-default-prefers-color-scheme[Using dark or light theme depends on your settings]
 - link:https://ulivz.com/[VuePress blog example]
-- https://my-blog.now.sh
-- link:https://zeit.co/now[now usage]
-- link:https://vuepress.vuejs.org/[VuePress usage]
+- link:https://zeit.co/now[using now]
+- link:https://vuepress.vuejs.org/[using VuePress]
 - link:https://vuepressbook.com/[VuePress book]
-- link:https://www.webfx.com/tools/emoji-cheat-sheet/[Find your emoji]
+- link:https://www.webfx.com/tools/emoji-cheat-sheet/[Find emoji]
+- https://stylus-lang.com/docs/variables.html
+

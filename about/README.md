@@ -1,4 +1,5 @@
 ---
+layout: FooteredLayout
 lang: ru-RU
 home: true
 title: Обо мне - Максим Костромин
@@ -25,4 +26,5 @@ tags:
 ---
 
 <MyJoke :value="''"/>
-<MyFooter />
+
+TODO: В разработке...

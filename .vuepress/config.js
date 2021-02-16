@@ -2,6 +2,7 @@ const base = !!process.env.GITHUB_PAGES ? '/my-blog/' : '/';
 
 module.exports = {
   extend: '@vuepress/theme-default', // extend the default VuePress theme
+  theme: 'default-prefers-color-scheme',
   lang: 'ru-RU',
   title: 'Мой блог',
   description: 'Делай дело',
@@ -11,6 +12,7 @@ module.exports = {
   ],
   docsDir: '.',
   themeConfig: {
+    prefersTheme: 'dark',
     smoothScroll: true,
     serviceWorker: {
       updatePopup: true,
@@ -41,5 +43,9 @@ module.exports = {
     extendMarkdown: md => {
       md.use(require('markdown-it-vuepress-code-snippet-enhanced'));
     },
+  },
+  // chainWebpack (config, isServer) { },
+  alias: {
+    '@': require('path').resolve(process.cwd(), '.vuepress'),
   },
 };

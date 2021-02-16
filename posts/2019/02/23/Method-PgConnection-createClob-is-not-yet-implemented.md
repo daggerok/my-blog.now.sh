@@ -1,4 +1,5 @@
 ---
+layout: FooteredLayout
 type: post
 todo: true
 home: false
@@ -42,4 +43,4 @@ spring:
 
 <!-- ;) -->
 
-<MyHomeHeroFooter />
+<MyDebug />
