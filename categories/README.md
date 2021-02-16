@@ -1,4 +1,5 @@
 ---
+layout: FooteredLayout
 lang: ru-RU
 home: true
 title: Категории
@@ -13,7 +14,10 @@ tags:
 
 ---
 
-<!--<MyCategories />-->
+TODO: В разработке...
+
+<!--
 <MyJoke />
 <MyDebug />
 <MyFooter />
+-->

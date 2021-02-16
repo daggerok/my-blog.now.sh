@@ -41,9 +41,8 @@
 <template>
   <footer class="footer">
     <div>
-      Все права защищены.
-      <br/>
-      Использование материалов, фотографий разрешается после подтверждения
+
+      <span v-if="!!footerMessage" v-html="footerMessage"></span>
       <br/>
       <br/>
       <br/>
@@ -56,5 +55,12 @@
 <script>
   export default {
     name: 'MyFooter',
+    data() {
+      return { footerMessage: undefined }
+    },
+    created() {
+      const { footer } = require('@/services/messages');
+      this.footerMessage = footer;
+    },
   };
 </script>

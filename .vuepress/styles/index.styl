@@ -18,8 +18,13 @@ body
   min-width 90%
 */
 
+my-blog-min-width = 78%
+
+.theme-default-content
+  min-width my-blog-min-width
+
 .description
-  min-width 78%
+  min-width my-blog-min-width
 
 body, html
   opacity 1
@@ -28,7 +33,7 @@ body, html
   animation-timing-function ease-in
   animation-duration 0.25s
 
-.hero > img
+.hero img
   border-radius 50%
 
 @keyframes fadeInOpacity
@@ -70,6 +75,7 @@ body, html
     padding-left 0
     padding-right 0
 
-.home .footer
-    padding-left 0
-    padding-right 0
+.footer
+  padding-left 0
+  padding-right 0
+  text-align center
