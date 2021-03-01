@@ -1,5 +1,5 @@
 ---
-layout: FooteredLayout
+layout: MyFooteredLayout
 lang: ru-RU
 home: true
 title: Тэги
@@ -25,10 +25,8 @@ tags:
 
 TODO: В разработке...
 
-<!--
 <MyTags />
 
+<!--
 <MyDebug :show$site=false />
-
-<MyFooter />
 -->

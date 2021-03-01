@@ -1,6 +1,7 @@
 ---
+lang: en-EN
 title: test page
-date: '2021/02/16 23:38:32'
+date: '2021-02-16 23:38:32 GMT+0200'
 type: post
 tag: nonono
 categories:
