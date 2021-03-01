@@ -3,20 +3,22 @@ env:
     - TERM=dumb
     - secure: QMVdaSoMcA823EOiT2slFfL5Da0GPpFVYHsMQjI8Qi0G93jc0c9MwJUTmLqtSIL4SZOBkQWRi9mKPR1GFff+ekhammyT8N361SJciyU7X8fyo8xb58VPtbbxQktfhMFvebJOM6KBT4ce2Bng/x7AfyXbgGDc0JXv7BJQzXnfdLFvr7x9ycR3Grm26qIPhi0b2dD6VXUFYo7JV2ZE4e1OZglza2sUwthobrglBl/rSzDq2RHm0QT4y4VErejTNPL59KcSfTcZ+JAj82n2vD245ZQDeRaRoh3mVeczfZxmJRiMdFWEK6wKf5aR7DveB/f2dSI4xbafAoKVJcnIQBE8714dHeFIy5wlba8j/jopMGFlYRinOIB8j98bfa0UeFs1GzsOdvsoS6jyeOQtg/3+IboIXEE88mZ5xIoEHH9m5gkpwg5GRBbzUwH8GddKZokWFU3CtSiyBU+IT5yDw1+sJiXhP6LBnqdHVpiNhVGhjO2vCN3VvhTNlNvDs0jXaAEvq49BWhtd42HMIyCtPNnWKlc6qwd8oimY9z78K9ZiGbtETK+K+gEVfD7sC0pLoW1B4EubZVuk8dGOXaTK4PaSzg48jKIsz7OYThvcTXgOnpO1dL/DG127Cv9InNwIm3cHQwz8fCzOtr4SowagkuTcNQ5wxT3jAPCbpgEzefBqh5c=
 language: node_js
-node_js: lts/*
+node_js:
+  - lts/*
+  #- 15.8.0
 install: true
 script:
-  - npm i
+  - npm i -E
   - npm run build
-cache:
-  npm: true
-  directories:
-    - node_modules
-    - "${HOME}/.node*"
-    - "${HOME}/.now*"
-    - "${HOME}/.npm*"
+#cache:
+#  npm: true
+#  directories:
+#    - node_modules
+#    - "${HOME}/.node*"
+#    - "${HOME}/.now*"
+#    - "${HOME}/.npm*"
 before_deploy:
-  - npm i
+  - npm i -E
   - npm run build
 deploy:
   provider: script

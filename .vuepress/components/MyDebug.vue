@@ -1,41 +1,118 @@
 <template>
   <div>
-    <h2>Привет</h2>
-    <p>Это моя офигительная Vue-компонента!</p>
+    <h2>дебаг компонента</h2>
+    <br/>
 
-    <div>$site</div>
-    <pre style="background-color: transparent">
-      {{ $site }}
-    </pre>
+    <span v-if="!!show$site && !!$site">
+      <hr/>
+      <div>$site</div>
+      <pre class="code-block">{{ $site }}</pre>
+    </span>
 
-    <div>$page</div>
-    <pre style="background-color: transparent">
-      {{ $page }}
-    </pre>
+    <span v-if="!!show$page && !!$page">
+      <hr/>
+      <div>$page</div>
+      <pre class="code-block">{{ $page }}</pre>
+    </span>
 
-    <div>$lang</div>
-    <pre style="background-color: transparent">
-      {{ $lang }}
-    </pre>
+    <span v-if="!!show$page_computed">
+      <hr/>
+      <div>$page._computed</div>
+      <pre class="code-block">{{ Object.keys($page) }}</pre>
+    </span>
 
-    <div>$localePath</div>
-    <pre style="background-color: transparent">
-      {{ $localePath }}
-    </pre>
+    <span v-if="!!show$frontmatter && !!$frontmatter">
+      <hr/>
+      <div>$frontmatter</div>
+      <pre class="code-block">{{ $frontmatter }}</pre>
+    </span>
 
-    <!--<div>$title</div>
-    <pre style="background-color: transparent">
-      {{ $title }}
-    </pre>
+    <span v-if="!!show$lang && !!$lang">
+      <hr/>
+      <div>$lang</div>
+      <pre class="code-block">{{ $lang }}</pre>
+    </span>
 
-    <div>$description</div>
-    <pre style="background-color: transparent">
-      {{ $description }}
-    </pre>-->
+    <span v-if="!!show$localePath && !!$localePath">
+      <hr/>
+      <div>$localePath</div>
+      <pre class="code-block">{{ $localePath }}</pre>
+    </span>
+
+    <span v-if="!!show$title && !!$title">
+      <hr/>
+      <div>$title</div>
+      <pre class="code-block">{{ $title }}</pre>
+    </span>
+
+    <span v-if="!!show$description && !!$description">
+      <hr/>
+      <div>$description</div>
+      <pre class="code-block">{{ $description }}</pre>
+    </span>
+
+    <span v-if="!!show$themeConfig && !!$themeConfig">
+      <hr/>
+      <div>$themeConfig</div>
+      <pre class="code-block">{{ $themeConfig }}</pre>
+    </span>
   </div>
 </template>
+
 <script>
   export default {
     name: 'MyDebug',
-  }
+    props: {
+      show$site: {
+        type: Boolean,
+        required: false,
+        default: true,
+      },
+      show$page: {
+        type: Boolean,
+        required: false,
+        default: true,
+      },
+      show$page_computed: {
+        type: Boolean,
+        required: false,
+        default: true,
+      },
+      show$frontmatter: {
+        type: Boolean,
+        required: false,
+        default: true,
+      },
+      show$lang: {
+        type: Boolean,
+        required: false,
+        default: true,
+      },
+      show$localePath: {
+        type: Boolean,
+        required: false,
+        default: true,
+      },
+      show$title: {
+        type: Boolean,
+        required: false,
+        default: true,
+      },
+      show$description: {
+        type: Boolean,
+        required: false,
+        default: true,
+      },
+      show$themeConfig: {
+        type: Boolean,
+        required: false,
+        default: true,
+      },
+    },
+  };
 </script>
+
+<style lang="stylus">
+  pre.code-block
+    background-color transparent
+</style>

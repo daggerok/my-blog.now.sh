@@ -1,35 +1,43 @@
 {
+  "readme": "README.adoc",
   "name": "my-blog.now.sh",
   "version": "2.0.0",
-  "main": "index.js",
   "homepage": "https://my-blog.now.sh/",
   "repository": "https://github.com/daggerok/my-blog.now.sh.git",
   "author": "Maksim Kostromin <daggerok@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "@vuepress/plugin-back-to-top": "1.8.0",
-    "@vuepress/plugin-blog": "1.9.4",
-    "@vuepress/plugin-medium-zoom": "1.8.0",
-    "@vuepress/plugin-pagination": "1.0.0-alpha.0",
-    "@vuepress/theme-default": "1.8.0",
-    "now": "14.0.0",
-    "npm": "7.5.2",
-    "rimraf": "3.0.2",
-    "serve": "11.3.2",
-    "vuepress": "1.8.0"
-  },
   "scripts": {
     "clean": "rimraf -rf .vuepress/dist",
+    "dev": "vuepress dev --no-cache --debug --no-clear-screen",
     "start": "vuepress dev",
     "build": "vuepress build",
     "preserve": "npm run build",
     "serve": "serve .vuepress/dist/",
-    "-predeploy": "now rm -y my-blog.now.sh",
     "deploy": "now --force --public -V 2 --name=my-blog.now.sh deploy .vuepress/dist",
     "postdeploy": "now alias my-blog.now.sh",
-    "-preci": "now --token=${NOW_TOKEN} rm -y my-blog.now.sh",
     "preci": "now --token=${NOW_TOKEN} ls ; now --token=${NOW_TOKEN} alias ls",
     "ci": "now --token=${NOW_TOKEN} --no-clipboard --force --public -V 2 --name=my-blog.now.sh deploy .vuepress/dist",
-    "postci": "now --token=${NOW_TOKEN} alias my-blog.now.sh"
+    "postci": "now --token=${NOW_TOKEN} alias my-blog.now.sh",
+    "-predeploy": "now rm -y my-blog.now.sh",
+    "-preci": "now --token=${NOW_TOKEN} rm -y my-blog.now.sh"
+  },
+  "dependencies": {
+    "@vuepress/plugin-back-to-top": "1.8.1",
+    "@vuepress/plugin-blog": "1.9.4",
+    "@vuepress/plugin-medium-zoom": "1.8.1",
+    "@vuepress/plugin-nprogress": "1.8.1",
+    "@vuepress/plugin-pagination": "1.0.0-alpha.0",
+    "@vuepress/theme-default": "1.8.1",
+    "markdown-it-vuepress-code-snippet-enhanced": "1.0.1",
+    "now": "14.0.0",
+    "vuepress": "1.8.1",
+    "vuepress-theme-default-prefers-color-scheme": "2.0.0"
+  },
+  "devDependencies": {
+    "@mr-hope/vuepress-types": "1.9.6",
+    "@types/node": "14.14.28",
+    "npm": "7.5.4",
+    "rimraf": "3.0.2",
+    "serve": "11.3.2"
   }
 }
