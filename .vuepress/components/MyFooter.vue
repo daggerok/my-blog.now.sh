@@ -59,7 +59,7 @@
       return { footerMessage: undefined }
     },
     created() {
-      const { footer } = require('@/services/messages');
+      const { footer } = require('@/my-services/messages');
       this.footerMessage = footer;
     },
   };

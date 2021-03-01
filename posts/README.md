@@ -5,6 +5,8 @@ todo: true
 home: false
 heroText: ' '
 description: ' '
+categories:
+- posts
 ---
 
 <MyPosts />

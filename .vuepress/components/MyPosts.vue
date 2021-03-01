@@ -15,7 +15,7 @@
 <script>
 import MyPostPreview from './MyPostPreview';
 import MyHomeHeroFooter from './MyHomeHeroFooter';
-
+const { dateOf } = require('@/my-services/dates');
 export default {
   name: 'MyPosts',
   components: {
@@ -55,15 +55,9 @@ export default {
       return this.$site.pages
                        .filter(page => page.frontmatter.type === 'post')
                        .filter(post => post.path.endsWith('.html'))
-                       .filter(tagIfPresent)
-                       // .filter(page => { console.log(page); return page; }) // debug logging...
-                       // .filter(html => html.frontmatter.published) // uncomment if you would like to void drafts
+                       .filter(tagIfPresent) // .filter(html => html.frontmatter.published) // uncomment if you would like to void drafts
                        // if no date fields provided by frontmatter, then compare git commit time, otherwise compare posts dates
-                       .sort(
-                           (post1, post2) =>
-                               new Date(post2.date || post2.lastUpdated || '1975-01-01 00:00:00 GMT+0200').getTime()
-                               - new Date(post1.date || post1.lastUpdated || '1975-01-01 00:00:00 GMT+0200').getTime()
-                       );
+                       .sort((post1, post2) => dateOf(post2).getTime() - dateOf(post1).getTime());
     },
   },
 };

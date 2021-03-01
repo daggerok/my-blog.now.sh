@@ -6,9 +6,7 @@ title: Тэги
 description: Спиок тэгов 
 date: '2021-02-11 17:08:27'
 categories:
-- tags category
-tags:
-- tags tag
+- tags
 #actionText: Читать →
 #actionLink: /
 #features:

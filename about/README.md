@@ -8,9 +8,7 @@ heroText: Максим Костромин
 description: Пишу ПО и умею подогревать еду в микроволновке 
 date: '2019-02-24 02:25:21 GMT+0200'
 categories:
-  - oloo trololo
-tags:
-  - ololo trololo
+- about
 #actionText: Читать →
 #actionLink: /
 #features:

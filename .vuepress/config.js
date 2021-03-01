@@ -20,16 +20,14 @@ module.exports = {
     nav: [
       { text: 'Блог', link: '/' },
       { text: 'Обо мне', link: '/about/' },
-      { text: 'Теги', link: '/tags/' },
       { text: 'Категории', link: '/categories/' },
+      { text: 'Теги', link: '/tags/' },
     ],
     // repo: 'daggerok/my-blog.now.sh',
     // lastUpdated: 'Обновлено', // string | boolean
   },
   plugins: [
-    'tag',
-    'category',
-    // '@vuepress/blog',
+    // '@vuepress/blog', // sorry, not this time...
     '@vuepress/nprogress',
     '@vuepress/medium-zoom',
     '@vuepress/back-to-top',

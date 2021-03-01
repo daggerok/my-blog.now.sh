@@ -10,6 +10,7 @@
     "clean": "rimraf -rf .vuepress/dist",
     "dev": "vuepress dev --no-cache --debug --no-clear-screen",
     "start": "vuepress dev",
+    "prebuild": "npm run clean",
     "build": "vuepress build",
     "preserve": "npm run build",
     "serve": "serve .vuepress/dist/",

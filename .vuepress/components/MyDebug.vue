@@ -15,12 +15,6 @@
       <pre class="code-block">{{ $page }}</pre>
     </span>
 
-    <span v-if="!!show$page_computed">
-      <hr/>
-      <div>$page._computed</div>
-      <pre class="code-block">{{ Object.keys($page) }}</pre>
-    </span>
-
     <span v-if="!!show$frontmatter && !!$frontmatter">
       <hr/>
       <div>$frontmatter</div>
