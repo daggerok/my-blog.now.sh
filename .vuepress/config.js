@@ -27,6 +27,8 @@ module.exports = {
     // lastUpdated: 'Обновлено', // string | boolean
   },
   plugins: [
+    'tag',
+    'category',
     // '@vuepress/blog',
     '@vuepress/nprogress',
     '@vuepress/medium-zoom',

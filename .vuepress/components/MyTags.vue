@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Tags</h1>
+    <h1>My tags</h1>
     <pre style="background-color: transparent">{{ tags }}</pre>
   </div>
 </template>
@@ -15,9 +15,9 @@ export default {
                        // .filter(page => page.path.endsWith('.html'))
                        .filter(htmlPage => !!htmlPage.frontmatter)
                        .map(htmlPage => htmlPage.frontmatter)
-                       .filter(frontmatter => !!frontmatter.tags)
-                       .flatMap(frontmatter => frontmatter.tags)
-                       .filter((value, index, self) => self.indexOf(value) === index);
+                       .filter(frontmatter => !!frontmatter.tags || !!frontmatter.tag)
+                       .flatMap(frontmatter => !!frontmatter.tags ? frontmatter.tags : [frontmatter.tag])
+                       .filter((tag, index, tags) => tags.indexOf(tag) === index);
     },
   },
 };

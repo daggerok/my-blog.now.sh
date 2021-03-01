@@ -1,5 +1,5 @@
 ---
-layout: FooteredLayout
+layout: MyFooteredLayout
 type: post
 todo: true
 home: false
@@ -8,7 +8,7 @@ heroText: " "
 meta:
   - name: keywords
     content: jpa, postgres, spring-boot, PostgresSQL, Spring Boot, JPA
-date: '2019/02/23 23:36:57'
+date: '2019/02/23 23:36:57 GMT+0200'
 title: "Method PgConnection createClob() is not yet implemented"
 description: |
   При использовании Postgres и Spring Boot JPA можно столкнуться
