@@ -9,7 +9,7 @@
         разрешается лишь после подтверждения
         <br/>
         <br/>
-        MIT | Copyright © 2019
+        MIT | Copyright © 2019-present
         <br/>
         <br/>
         Максим Костромин он же <a href="https://github.com/daggerok">daggerok</a>
