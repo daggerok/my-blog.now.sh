@@ -1,0 +1,28 @@
+name: 'my-blog.now.sh github pages'
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 15.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 15.x
+    - name: Cache npm
+      id: my-blog-now-sh-npm-cache
+      uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-${{ hashFiles('**/package.json') }}
+    - run: npm i -E
+    - run: npm run github-pages
+    - name: Deploy 🚀 GitHub Pages build
+      uses: JamesIves/github-pages-deploy-action@4.1.0
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: public # The folder the action should deploy.

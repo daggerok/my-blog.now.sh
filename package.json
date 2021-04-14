@@ -7,38 +7,30 @@
   "author": "Maksim Kostromin <daggerok@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "clean": "rimraf -rf .vuepress/dist",
-    "dev": "vuepress dev --no-cache --debug --no-clear-screen",
-    "start": "vuepress dev",
+    "clean": "rimraf -rf public",
+    "dev": "vuepress dev",
+    "start": "vuepress dev -- --debug --no-clear-screen",
     "prebuild": "npm run clean",
-    "build": "vuepress build",
+    "build": "vuepress build --no-cache --dest public",
     "preserve": "npm run build",
-    "serve": "serve .vuepress/dist/",
-    "deploy": "now --force --public -V 2 --name=my-blog.now.sh deploy .vuepress/dist",
-    "postdeploy": "now alias my-blog.now.sh",
-    "preci": "now --token=${NOW_TOKEN} ls ; now --token=${NOW_TOKEN} alias ls",
-    "ci": "now --token=${NOW_TOKEN} --no-clipboard --force --public -V 2 --name=my-blog.now.sh deploy .vuepress/dist",
-    "postci": "now --token=${NOW_TOKEN} alias my-blog.now.sh",
-    "-predeploy": "now rm -y my-blog.now.sh",
-    "-preci": "now --token=${NOW_TOKEN} rm -y my-blog.now.sh"
+    "serve": "serve public",
+    "github-pages": "cross-env BASE='/my-blog.now.sh/' npm run build"
   },
   "dependencies": {
-    "@vuepress/plugin-back-to-top": "1.8.1",
+    "@mr-hope/vuepress-types": "1.14.3",
+    "@types/node": "14.14.37",
+    "@vuepress/plugin-back-to-top": "1.8.2",
     "@vuepress/plugin-blog": "1.9.4",
-    "@vuepress/plugin-medium-zoom": "1.8.1",
-    "@vuepress/plugin-nprogress": "1.8.1",
+    "@vuepress/plugin-medium-zoom": "1.8.2",
+    "@vuepress/plugin-nprogress": "1.8.2",
     "@vuepress/plugin-pagination": "1.0.0-alpha.0",
-    "@vuepress/theme-default": "1.8.1",
+    "@vuepress/theme-default": "1.8.2",
+    "cross-env": "7.0.3",
     "markdown-it-vuepress-code-snippet-enhanced": "1.0.1",
-    "now": "14.0.0",
-    "vuepress": "1.8.1",
-    "vuepress-theme-default-prefers-color-scheme": "2.0.0"
-  },
-  "devDependencies": {
-    "@mr-hope/vuepress-types": "1.9.6",
-    "@types/node": "14.14.28",
-    "npm": "7.5.4",
     "rimraf": "3.0.2",
-    "serve": "11.3.2"
+    "serve": "11.3.2",
+    "vercel": "21.3.3",
+    "vuepress": "1.8.2",
+    "vuepress-theme-default-prefers-color-scheme": "2.0.0"
   }
 }

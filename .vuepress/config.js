@@ -1,4 +1,4 @@
-const base = !!process.env.GITHUB_PAGES ? '/my-blog/' : '/';
+const base = process.env.BASE || '/';
 
 module.exports = {
   extend: '@vuepress/theme-default', // extend the default VuePress theme
@@ -8,7 +8,7 @@ module.exports = {
   description: 'Делай дело',
   base,
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: base + 'favicon.ico' }]
   ],
   docsDir: '.',
   themeConfig: {

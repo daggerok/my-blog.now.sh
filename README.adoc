@@ -1,4 +1,8 @@
-= my-blog.now.sh image:https://travis-ci.org/daggerok/my-blog.now.sh.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/my-blog.now.sh"]
+= my-blog.now.sh image:https://github.com/daggerok/my-blog.now.sh/actions/workflows/github-pages.yaml/badge.svg["Build Status", link="https://github.com/daggerok/my-blog.now.sh/actions/workflows/github-pages.yaml"]
+
+Checkout GitHub Pages: https://daggerok.github.io/my-blog.now.sh/
+
+== add new post
 
 [source,bash]
 ----
@@ -7,7 +11,25 @@ npm i -gED yubisaki-shell
 npx yubisaki-shell post -p posts/2021/02/05/lets-test-that-shit --page README.md
 ----
 
-current (custom) blog is located here: https://my-blog.now.sh
+current (custom) blog is located here: https://my-blog.now.sh or here: https://my-blog.vercel.app
+
+== deploy
+
+[source,bash]
+----
+npm i ; npm run build
+./node_modules/.bin/vercle public --prod
+----
+
+or
+
+[source,bash]
+----
+npm i ; npm run build
+npx vercle public --prod
+----
+
+== rtfm
 
 correct way do VuePress blogging:
 
@@ -23,4 +45,3 @@ current (alternative) custom way do VuePress blogging:
 - link:https://vuepressbook.com/[VuePress book]
 - link:https://www.webfx.com/tools/emoji-cheat-sheet/[Find emoji]
 - https://stylus-lang.com/docs/variables.html
-
