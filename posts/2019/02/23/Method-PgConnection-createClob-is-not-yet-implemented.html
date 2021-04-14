@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Method PgConnection createClob() is not yet implemented | Мой блог</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/my-blog.now.sh/my-blog.now.sh/favicon.ico">
+    <meta name="description" content="При использовании Postgres и Spring Boot JPA можно столкнуться
+с ошибкой типа Method PgConnection createClob() is not yet implemented.
+">
+    <meta name="keywords" content="jpa, postgres, spring-boot, PostgresSQL, Spring Boot, JPA">
+    
+    <link rel="preload" href="/my-blog.now.sh/assets/css/0.styles.85fe15e1.css" as="style"><link rel="preload" href="/my-blog.now.sh/assets/js/app.5aeaba4e.js" as="script"><link rel="preload" href="/my-blog.now.sh/assets/js/6.f0ea58ab.js" as="script"><link rel="preload" href="/my-blog.now.sh/assets/js/1.c03c8e93.js" as="script"><link rel="preload" href="/my-blog.now.sh/assets/js/19.77ff0e20.js" as="script"><link rel="prefetch" href="/my-blog.now.sh/assets/js/10.3f6c8d34.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/11.16cd80c4.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/12.89f86278.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/13.3fff7236.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/14.31c8c5ca.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/15.71b4d8cd.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/16.ead937a3.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/17.7dd20664.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/18.9f7c30fb.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/20.b07b6cfe.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/21.304b418f.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/22.621d30b5.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/3.6036d7b0.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/4.b1014e67.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/5.6cc23372.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/7.e7d1df7f.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/8.a117106d.js"><link rel="prefetch" href="/my-blog.now.sh/assets/js/9.acd3d892.js">
+    <link rel="stylesheet" href="/my-blog.now.sh/assets/css/0.styles.85fe15e1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="content-wrapping-section"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/my-blog.now.sh/" class="home-link router-link-active"><!----> <span class="site-name">Мой блог</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/my-blog.now.sh/" class="nav-link">
+  Блог
+</a></div><div class="nav-item"><a href="/my-blog.now.sh/about/" class="nav-link">
+  Обо мне
+</a></div><div class="nav-item"><a href="/my-blog.now.sh/categories/" class="nav-link">
+  Категории
+</a></div><div class="nav-item"><a href="/my-blog.now.sh/tags/" class="nav-link">
+  Теги
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/my-blog.now.sh/" class="nav-link">
+  Блог
+</a></div><div class="nav-item"><a href="/my-blog.now.sh/about/" class="nav-link">
+  Обо мне
+</a></div><div class="nav-item"><a href="/my-blog.now.sh/categories/" class="nav-link">
+  Категории
+</a></div><div class="nav-item"><a href="/my-blog.now.sh/tags/" class="nav-link">
+  Теги
+</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><p>Если в логах spring-boot / postgres придложения видно примерно такое:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>  Caused by: java.sql.SQLFeatureNotSupportedException: 
+  Method org.postgresql.jdbc.PgConnection.createClob<span class="token punctuation">(</span><span class="token punctuation">)</span> is not yet implemented.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>то пофиксить это можно, добавлением следующего конфига в <code>src/main/resources/application.yaml</code> файл:</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">jpa</span><span class="token punctuation">:</span>
+    <span class="token key atrule">properties</span><span class="token punctuation">:</span>
+      <span class="token key atrule">hibernate</span><span class="token punctuation">:</span>
+        <span class="token key atrule">temp</span><span class="token punctuation">:</span>
+          <span class="token key atrule">use_jdbc_metadata_defaults</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div></div> <div class="home"><footer class="footer"><div><span>Используйте материалы и фотографии после подтверждения</span> <br> <br> <br>
+    Copyright © 2019 <strong>MIT</strong> | <a href="https://about.me/daggerok">Максим Костромин</a></div></footer></div></div><div class="global-ui"><!----></div></div>
+    <script src="/my-blog.now.sh/assets/js/app.5aeaba4e.js" defer></script><script src="/my-blog.now.sh/assets/js/6.f0ea58ab.js" defer></script><script src="/my-blog.now.sh/assets/js/1.c03c8e93.js" defer></script><script src="/my-blog.now.sh/assets/js/19.77ff0e20.js" defer></script>
+  </body>
+</html>
